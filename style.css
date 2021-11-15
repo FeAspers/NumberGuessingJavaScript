@@ -1,5 +1,7 @@
+/* This is in css stylesheet */
 body{
-	background-color: blue;
+	background-color: black;
+	background-image: url("https://github.com/winstontom/NumberGuessingJavaScript/blob/main/Images/background_numbers.jpg?raw=true");
 	text-align: center;
 	color:white;
 }
