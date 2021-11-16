@@ -19,6 +19,15 @@
 		gameNumber = Math.floor(Math.random() * 5) + 1;
 		console.log("Computer has chosen number: ", gameNumber);
 		document.getElementById("userMessage").innerHTML = "Think of a number from 1 to 5.<br><br>";
+	
+	
+	// CREATE A DELAY IN ORDER TO SHOW GREETING AND PICK A NUMBER MESSAGE.
+	// THIS REQUIRE SPLITTING THE GAMEPLAY FUNCTION INTO PART 1 AND 2
+	
+	setTimeout(play2, 1500)
+	}
+	function play2() {
+		
 
 		getNumber = prompt("Enter a number between 1 and 5.");
 		console.log(getName, " picked number: ", getNumber);
