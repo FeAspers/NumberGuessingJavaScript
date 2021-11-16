@@ -4,30 +4,31 @@
 	var getNumber = 0;
 	var gameNumber = 6;
 	var resultMsg = "Waiting to play";
-	
+
 	console.log(myMessage);
 	myMessage = "Guessing numbers between 1 and 5.";
-	document.write(myMessage);
-	
-// Function to play gameNumber
+	document.getElementById("userMessage").innerHTML = myMessage;
+
+	// Function to play gameNumber
 	function play() {
-		getName = prompt("Please enter your name :)", "name");
-		document.write("Hello, " + getName + "!<br><br>");
+		myMessage = "User clicked button to play game.";
+		document.getElementById("userMessage").innerHTML = myMessage;
+		getName = prompt("Please enter your name.", "name");
+		document.getElementById("userName").innerHTML = "Hello, " + getName + "!";
 		
 		gameNumber = Math.floor(Math.random() * 5) + 1;
 		console.log("Computer has chosen number: ", gameNumber);
-		document.write("Think of a number from 1 to 5.<br><br>");
-		
+		document.getElementById("userMessage").innerHTML = "Think of a number from 1 to 5.<br><br>";
+
 		getNumber = prompt("Enter a number between 1 and 5.");
-		console.log(getName, "picked number: ", getNumber);
-		document.write("You picked number: " + String(getNumber) + " and Computer picked number: " + String(gameNumber));
-		
-		if(getNumber != gameNumber) {
-			resultMsg = " You guessed wrong!"
-		} else {
-			resultMsg = " WOW! You guessed the number!";
-		}
-		document.write(resultMsg)
-		}
-		
-// NOW OUT OF JAVASCRIPT MODE
+		console.log(getName, " picked number: ", getNumber);
+		document.getElementById("userMessage").innerHTML = "You picked number : " + String(getNumber) + "<br>Computer picked number : " + String(gameNumber);
+
+	if(getNumber != gameNumber) {
+		resultMsg = "You guessed wrong!";
+	} else {
+		resultMsg = "WOW! You guessed the number!";
+	}
+	document.getElementById("winnerMessage").innerHTML = resultMsg;
+
+	}
