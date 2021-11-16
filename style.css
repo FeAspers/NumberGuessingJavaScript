@@ -2,6 +2,7 @@
 body{
 	background-color: black;
 	background-image: url("https://github.com/winstontom/NumberGuessingJavaScript/blob/main/Images/background_numbers.jpg?raw=true");
+	background-repeat: repeat;
 	text-align: center;
 	color:white;
 }
